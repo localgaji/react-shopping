@@ -17,7 +17,7 @@ spec:
           image: krmp-d2hub-idock.9rum.cc/dev-test/repo_9d9678dcd735
           volumeMounts:
           - name: config
-            mountPath: "/"
+            mountPath: /etc/nginx/nginx.conf
       volumes:
         - name: config
           configMap:
