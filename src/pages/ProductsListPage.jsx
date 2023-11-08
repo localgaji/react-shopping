@@ -44,12 +44,14 @@ const ProductsListPage = () => {
     return () => {io.disconnect();}
     
   }, [hasNextPage]) 
-
-
+  
+  const path = process.env.REACT_APP_PATH || "";
+  const apiURL = !!path ? path + "/api" : process.env.REACT_APP_API_URL;
+  
   return (
 
     <Section>
-      <div>{!!path ? path + "/api" : process.env.REACT_APP_API_URL}</div>
+      <div>{apiURL}</div>
       <Carousel/>
       <ListContainer>
         {listData && <ProductsList data={listData} />}
