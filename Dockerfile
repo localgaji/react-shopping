@@ -2,7 +2,6 @@
 FROM krmp-d2hub-idock.9rum.cc/goorm/node:16
 WORKDIR /usr/src/app
 COPY . .
-COPY default.conf /etc/nginx/conf.d/
 
 ENV REACT_APP_API_URL=http://abcde.com
 
