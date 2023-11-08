@@ -5,7 +5,7 @@ metadata:
 data:
   nginx.conf: |-
     server {
-      root /usr/src/app/build;
+      root /build;
       error_page  404 index.html;
       location / {
         try_files $uri $uri/ /index.html;
