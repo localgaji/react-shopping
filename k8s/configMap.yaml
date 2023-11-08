@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: frontconfig
+  namespace: default
+data:
+  server-snippet: |-
+    location / {
+      try_files $uri $uri/ /index.html;
+    }
