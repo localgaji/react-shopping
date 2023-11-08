@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 
 import ProductsListPage from "pages/ProductsListPage";
 import LoginPage from "pages/LoginPage";
@@ -24,7 +24,7 @@ const path = process.env.REACT_APP_PATH || "";
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <PageContainer>
         <GNB></GNB>
         <MainContainer>
@@ -50,7 +50,7 @@ function App() {
         </MainContainer>
         <Toast />
       </PageContainer>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
