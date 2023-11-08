@@ -49,6 +49,7 @@ const ProductsListPage = () => {
   return (
 
     <Section>
+      <div>{!!path ? path + "/api" : process.env.REACT_APP_API_URL}</div>
       <Carousel/>
       <ListContainer>
         {listData && <ProductsList data={listData} />}
