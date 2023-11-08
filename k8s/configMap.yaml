@@ -6,7 +6,6 @@ data:
   nginx.conf: |-
     server {
       location / {
-        try_files $uri $uri/ /index.html;
         if (!-e $request_filename){
           rewrite ^(.*)$ /index.html break;
         }
